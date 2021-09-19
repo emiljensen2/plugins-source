@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Owain van Brakel <https:github.com/Owain94>
+ * Copyright (c) 2019, Liam Edwards <http://github.com/Spedwards>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,30 +22,37 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+package net.runelite.client.plugins.socket.plugins.worldhopperextended;
 
-rootProject.name = "OPSocket Plugins"
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import net.runelite.http.api.worlds.WorldRegion;
 
-include(":socket")
-include(":socketdeathindicator")
-include(":socketplayerstatus")
-include(":socketplayerstatusextended")
-include(":socketsotetseg")
-include(":socketbosstimer")
-include(":socketchat")
-//include(":socketdefence")
-include(":socketDPS")
-include(":sockethealing")
-include(":socketicedemon")
-include(":socketplanks")
-include(":socketthieving")
-//include(":socketworldhopperextended")
+@NoArgsConstructor
+@AllArgsConstructor
+public enum RegionFilterMode
+{
+    NONE,
+    AUSTRALIA(WorldRegion.AUSTRALIA),
+    GERMANY(WorldRegion.GERMANY),
+    UNITED_KINGDOM(WorldRegion.UNITED_KINGDOM)
+            {
+                @Override
+                public String toString()
+                {
+                    return "U.K.";
+                }
+            },
+    UNITED_STATES(WorldRegion.UNITED_STATES_OF_AMERICA)
+            {
+                @Override
+                public String toString()
+                {
+                    return "USA";
+                }
+            };
 
-for (project in rootProject.children) {
-    project.apply {
-        projectDir = file(name)
-        buildFileName = "$name.gradle.kts"
-
-        require(projectDir.isDirectory) { "Project '${project.path} must have a $projectDir directory" }
-        require(buildFile.isFile) { "Project '${project.path} must have a $buildFile build script" }
-    }
+    @Getter
+    private WorldRegion region;
 }
