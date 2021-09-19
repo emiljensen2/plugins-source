@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketicedemon;
+package net.runelite.client.plugins.socketicedemon;
 
 import javax.inject.Inject;
 import net.runelite.api.Client;

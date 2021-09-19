@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketplanks;
+package net.runelite.client.plugins.socketplanks;
 
 import java.awt.Color;
 import java.awt.Dimension;

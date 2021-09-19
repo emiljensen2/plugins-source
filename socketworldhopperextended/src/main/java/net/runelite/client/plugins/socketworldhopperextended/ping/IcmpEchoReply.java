@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.worldhopperextended.ping;
+package net.runelite.client.plugins.worldhopperextended.ping;
 
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;

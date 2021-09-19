@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketicedemon.util;
+package net.runelite.client.plugins.socketicedemon.util;
 
 public class Raids1Util
 {

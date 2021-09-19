@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketDPS.table;
+package net.runelite.client.plugins.socketDPS.table;
 
 import java.awt.Color;
 import java.util.List;

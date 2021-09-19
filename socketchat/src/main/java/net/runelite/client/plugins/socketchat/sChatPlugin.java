@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.chat;
+package net.runelite.client.plugins.socketchat;
 
 import com.google.inject.Provides;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.sockethealing;
+package net.runelite.client.plugins.sockethealing;
 
 import com.google.inject.Provides;
 import java.util.ArrayList;

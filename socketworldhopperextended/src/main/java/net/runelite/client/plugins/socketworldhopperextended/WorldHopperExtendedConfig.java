@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.worldhopperextended;
+package net.runelite.client.plugins.socketworldhopperextended;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;

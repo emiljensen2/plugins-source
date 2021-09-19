@@ -50,6 +50,8 @@ import net.runelite.client.plugins.socket.packet.SocketBroadcastPacket;
 import net.runelite.client.plugins.socket.packet.SocketPlayerJoin;
 import net.runelite.client.plugins.socket.packet.SocketPlayerLeave;
 import net.runelite.client.plugins.socket.packet.SocketReceivePacket;
+import net.runelite.client.plugins.socket.packet.SocketStartup;
+import net.runelite.client.plugins.socket.packet.SocketShutdown;
 import org.pf4j.Extension;
 
 @Slf4j
@@ -100,16 +102,32 @@ public class SocketPlugin extends Plugin
 	protected void startUp()
 	{
 		nextConnection = 0L;
+
+		eventBus.register(SocketReceivePacket.class);
+		eventBus.register(SocketBroadcastPacket.class);
+
+		eventBus.register(SocketPlayerJoin.class);
+		eventBus.register(SocketPlayerLeave.class);
+
+		eventBus.register(SocketStartup.class);
+		eventBus.register(SocketShutdown.class);
+
+		eventBus.post(new SocketStartup());
 	}
 
 	@Override
 	protected void shutDown()
 	{
+		eventBus.post(new SocketShutdown());
+
 		eventBus.unregister(SocketReceivePacket.class);
 		eventBus.unregister(SocketBroadcastPacket.class);
 
 		eventBus.unregister(SocketPlayerJoin.class);
 		eventBus.unregister(SocketPlayerLeave.class);
+
+		eventBus.unregister(SocketStartup.class);
+		eventBus.unregister(SocketShutdown.class);
 
 		if (connection != null)
 		{

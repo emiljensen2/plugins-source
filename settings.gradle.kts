@@ -32,13 +32,14 @@ include(":socketplayerstatusextended")
 include(":socketsotetseg")
 include(":socketbosstimer")
 include(":socketchat")
-//include(":socketdefence")
+include(":socketdefence")
 include(":socketDPS")
 include(":sockethealing")
 include(":socketicedemon")
 include(":socketplanks")
 include(":socketthieving")
 //include(":socketworldhopperextended")
+include(":socketplayerindicatorsextended")
 
 for (project in rootProject.children) {
     project.apply {

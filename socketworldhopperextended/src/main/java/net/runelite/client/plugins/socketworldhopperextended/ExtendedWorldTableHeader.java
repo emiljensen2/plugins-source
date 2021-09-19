@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.worldhopperextended;
+package net.runelite.client.plugins.socketworldhopperextended;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

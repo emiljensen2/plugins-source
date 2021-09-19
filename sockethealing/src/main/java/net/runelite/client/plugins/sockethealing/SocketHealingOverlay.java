@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.sockethealing;
+package net.runelite.client.plugins.sockethealing;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

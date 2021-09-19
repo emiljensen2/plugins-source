@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketbosstimer;
+package net.runelite.client.plugins.socketbosstimer;
 
 import com.google.inject.Provides;
 import java.awt.Color;

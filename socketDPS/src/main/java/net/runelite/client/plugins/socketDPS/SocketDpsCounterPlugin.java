@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketDPS;
+package net.runelite.client.plugins.socketDPS;
 
 import com.google.inject.Provides;
 import java.util.ArrayList;

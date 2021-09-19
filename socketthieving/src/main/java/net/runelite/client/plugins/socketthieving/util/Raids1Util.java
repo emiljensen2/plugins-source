@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketthieving.util;
+package net.runelite.client.plugins.socketthieving.util;
 
 public class Raids1Util
 {

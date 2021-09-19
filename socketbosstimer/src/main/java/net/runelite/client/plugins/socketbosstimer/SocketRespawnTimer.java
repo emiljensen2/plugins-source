@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketbosstimer;
+package net.runelite.client.plugins.socketbosstimer;
 
 import java.awt.image.BufferedImage;
 import java.time.temporal.ChronoUnit;

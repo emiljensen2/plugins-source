@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketthieving;
+package net.runelite.client.plugins.socketthieving;
 
 import net.runelite.client.plugins.socket.org.json.JSONObject;
 

@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketDPS.table;
+package net.runelite.client.plugins.socketDPS.table;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -12,7 +12,7 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import lombok.NonNull;
-import net.runelite.client.plugins.socket.plugins.socketDPS.SocketTextComponent;
+import net.runelite.client.plugins.socketDPS.SocketTextComponent;
 import net.runelite.client.ui.overlay.components.LayoutableRenderableEntity;
 import net.runelite.client.ui.overlay.components.TextComponent;
 

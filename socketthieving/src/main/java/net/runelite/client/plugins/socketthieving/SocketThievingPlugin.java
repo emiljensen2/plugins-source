@@ -1,4 +1,4 @@
-package net.runelite.client.plugins.socket.plugins.socketthieving;
+package net.runelite.client.plugins.socketthieving;
 
 import com.google.inject.Provides;
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ import net.runelite.client.plugins.socket.org.json.JSONArray;
 import net.runelite.client.plugins.socket.org.json.JSONObject;
 import net.runelite.client.plugins.socket.packet.SocketBroadcastPacket;
 import net.runelite.client.plugins.socket.packet.SocketReceivePacket;
-import net.runelite.client.plugins.socket.plugins.socketthieving.util.Raids1Util;
+import net.runelite.client.plugins.socketthieving.util.Raids1Util;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.util.Text;
 import org.pf4j.Extension;

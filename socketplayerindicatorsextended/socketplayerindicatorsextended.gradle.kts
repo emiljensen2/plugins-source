@@ -1,5 +1,7 @@
+import ProjectVersions.rlVersion
+
 /*
- * Copyright (c) 2019, Liam Edwards <http://github.com/Spedwards>
+ * Copyright (c) 2019 Owain van Brakel <https://github.com/Owain94>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,37 +24,39 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package net.runelite.client.plugins.socketworldhopperextended;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import net.runelite.http.api.worlds.WorldRegion;
+version = "5.0.0"
 
-@NoArgsConstructor
-@AllArgsConstructor
-public enum RegionFilterMode
-{
-    NONE,
-    AUSTRALIA(WorldRegion.AUSTRALIA),
-    GERMANY(WorldRegion.GERMANY),
-    UNITED_KINGDOM(WorldRegion.UNITED_KINGDOM)
-            {
-                @Override
-                public String toString()
-                {
-                    return "U.K.";
-                }
-            },
-    UNITED_STATES(WorldRegion.UNITED_STATES_OF_AMERICA)
-            {
-                @Override
-                public String toString()
-                {
-                    return "USA";
-                }
-            };
+project.extra["PluginName"] = "Socket Player Indicator"
+project.extra["PluginDescription"] = "Shows you players who are in your socket"
 
-    @Getter
-    private WorldRegion region;
+dependencies {
+    annotationProcessor(Libraries.lombok)
+    annotationProcessor(Libraries.pf4j)
+
+    compileOnly("com.openosrs:runelite-api:$rlVersion")
+    compileOnly("com.openosrs:runelite-client:$rlVersion")
+
+    compileOnly(project(":socket"))
+
+    compileOnly(Libraries.guice)
+    compileOnly(Libraries.lombok)
+    compileOnly(Libraries.pf4j)
+}
+
+tasks {
+    jar {
+        manifest {
+            attributes(
+                mapOf(
+                    "Plugin-Version" to project.version,
+                    "Plugin-Id" to nameToId(project.extra["PluginName"] as String),
+                    "Plugin-Provider" to project.extra["PluginProvider"],
+                    "Plugin-Dependencies" to nameToId("socket"),
+                    "Plugin-Description" to project.extra["PluginDescription"],
+                    "Plugin-License" to project.extra["PluginLicense"]
+                )
+            )
+        }
+    }
 }
