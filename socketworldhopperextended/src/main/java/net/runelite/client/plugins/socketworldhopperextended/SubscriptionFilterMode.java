@@ -1,5 +1,6 @@
 package net.runelite.client.plugins.socketworldhopperextended;
 
-public enum SubscriptionFilterMode {
-    BOTH, FREE, MEMBERS;
+public enum SubscriptionFilterMode
+{
+	BOTH, FREE, MEMBERS;
 }

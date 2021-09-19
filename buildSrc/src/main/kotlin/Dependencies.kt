@@ -42,6 +42,7 @@ object Libraries {
         const val pf4j = "3.5.0"
         const val rxjava = "3.0.7"
         const val slf4j = "1.7.30"
+        const val jna = "5.5.0"
     }
 
     const val annotations = "org.jetbrains:annotations:${Versions.annotations}"
@@ -57,5 +58,7 @@ object Libraries {
     const val pf4j = "org.pf4j:pf4j:${Versions.pf4j}"
     const val rxjava = "io.reactivex.rxjava3:rxjava:${Versions.rxjava}"
     const val slf4jApi = "org.slf4j:slf4j-api:${Versions.slf4j}"
+    const val jna = "net.java.dev.jna:jna:${Versions.jna}"
+    const val jnaPlatform = "net.java.dev.jna:jna-platform:${Versions.jna}"
 
 }

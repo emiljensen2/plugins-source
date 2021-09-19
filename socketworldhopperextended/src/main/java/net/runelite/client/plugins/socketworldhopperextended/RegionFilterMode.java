@@ -33,26 +33,26 @@ import net.runelite.http.api.worlds.WorldRegion;
 @AllArgsConstructor
 public enum RegionFilterMode
 {
-    NONE,
-    AUSTRALIA(WorldRegion.AUSTRALIA),
-    GERMANY(WorldRegion.GERMANY),
-    UNITED_KINGDOM(WorldRegion.UNITED_KINGDOM)
-            {
-                @Override
-                public String toString()
-                {
-                    return "U.K.";
-                }
-            },
-    UNITED_STATES(WorldRegion.UNITED_STATES_OF_AMERICA)
-            {
-                @Override
-                public String toString()
-                {
-                    return "USA";
-                }
-            };
+	NONE,
+	AUSTRALIA(WorldRegion.AUSTRALIA),
+	GERMANY(WorldRegion.GERMANY),
+	UNITED_KINGDOM(WorldRegion.UNITED_KINGDOM)
+		{
+			@Override
+			public String toString()
+			{
+				return "U.K.";
+			}
+		},
+	UNITED_STATES(WorldRegion.UNITED_STATES_OF_AMERICA)
+		{
+			@Override
+			public String toString()
+			{
+				return "USA";
+			}
+		};
 
-    @Getter
-    private WorldRegion region;
+	@Getter
+	private WorldRegion region;
 }

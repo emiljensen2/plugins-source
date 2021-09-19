@@ -36,26 +36,31 @@ dependencies {
 
     compileOnly("com.openosrs:runelite-api:$rlVersion")
     compileOnly("com.openosrs:runelite-client:$rlVersion")
+    compileOnly("com.openosrs:http-api:$rlVersion")
 
     compileOnly(project(":socket"))
 
     compileOnly(Libraries.guice)
     compileOnly(Libraries.lombok)
     compileOnly(Libraries.pf4j)
+    compileOnly(Libraries.jna)
+    compileOnly(Libraries.jnaPlatform)
     compileOnly(Libraries.apacheCommonsText)
 }
 
 tasks {
     jar {
         manifest {
-            attributes(mapOf(
+            attributes(
+                mapOf(
                     "Plugin-Version" to project.version,
                     "Plugin-Id" to nameToId(project.extra["PluginName"] as String),
                     "Plugin-Provider" to project.extra["PluginProvider"],
                     "Plugin-Dependencies" to nameToId("socket"),
                     "Plugin-Description" to project.extra["PluginDescription"],
                     "Plugin-License" to project.extra["PluginLicense"]
-            ))
+                )
+            )
         }
     }
 }

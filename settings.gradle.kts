@@ -38,7 +38,7 @@ include(":sockethealing")
 include(":socketicedemon")
 include(":socketplanks")
 include(":socketthieving")
-//include(":socketworldhopperextended")
+include(":socketworldhopperextended")
 include(":socketplayerindicatorsextended")
 
 for (project in rootProject.children) {
